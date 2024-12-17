@@ -1,0 +1,86 @@
+
+    .container {
+        height: 100vh;
+        display: flex;
+        width: 100%;
+        align-items: start;
+    }
+
+    /* Cart Section Styling */
+    .cart-cont {
+        width: 100%;
+        box-shadow: 4px 4px 8px rgb(70, 138, 103);
+        margin: auto;
+        text-align: center;
+    }
+
+    /* Product Section Styling */
+    .product-cont {
+        margin-top: 100px;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 15px;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Card Styling */
+    .CardList {
+        border: 1px solid gray;
+        padding: 5px;
+    }
+
+    /* Cart Image Styling */
+    .cart-img {
+        width: 150px;
+    }
+
+    /* Main Cart Layout */
+    .main-cart {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    /* Product Card Styling */
+    .product-card {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 10px;
+        width: 200px;
+        text-align: center;
+    }
+
+    .product-card img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .product-card h5 {
+        font-size: 18px;
+        margin-top: 10px;
+    }
+
+    .product-card p {
+        font-size: 14px;
+        color: #555;
+    }
+
+    .product-card .price {
+        font-weight: bold;
+        color: green;
+    }
+
+    .product-card button {
+        margin-top: 10px;
+    }
+    #cart-cont {
+        padding: 20px;
+    }
+    
+    #cart-cont h4 {
+        margin-bottom: 20px;
+        font-size: 1.2rem;
+    }
+    

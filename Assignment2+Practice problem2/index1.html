@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talha's E-shop</title>
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="index1.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-dark bg-secondary fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">E-shop</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end text-bg-success" tabindex="-1" id="offcanvasDarkNavbar">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title">Menu</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Products</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container-fluid mt-5 pt-5">
+        <div class="row">
+            <!-- Product Section -->
+            <div class="col-md-9">
+                <div class="input-group mb-3">
+                    <input type="text" id="search-input" class="form-control" placeholder="Search products by title...">
+                    <button class="btn btn-primary" id="search-btn" onclick="searchProducts()">Search</button>
+                </div>
+                <div id="product-cont" class="row"></div>
+            </div>
+            <div class="col-md-3">
+                <div id="cart-cont" class="cart-cont border p-3 bg-light rounded">
+                    <h4>Cart Item's: <span id="cart-item"></span></h4>
+                    <button class="btn btn-primary w-100 mb-2" data-bs-toggle="modal" data-bs-target="#cartModal">
+                        View Cart
+                    </button>
+                    <hr>
+                    <div id="cart-main-container" class="cart-main-container"></div>
+                    <hr>
+                    <h4>Total Amount: $<span id="summ">0.00</span></h4>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Modal -->
+    <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cartModalLabel">Your Cart</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="cart-modal-container">
+                    <!-- Cart items will be displayed here -->
+                </div>
+                <div class="modal-footer">
+                    <h5>Total Amount: $<span id="modal-summ">0.00</span></h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Details Modal -->
+    <div class="modal fade" id="detailsModal" tabindex="-1" aria-labelledby="detailsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="detailsModalLabel">Product Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="details-content" class="row">
+                        <div class="col-md-6">
+                            <img id="details-image" class="img-fluid">
+                        </div>
+                        <div class="col-md-6">
+                            <h4 id="details-title"></h4>
+                            <p id="details-description"></p>
+                            <h5>Price: $<span id="details-price"></span></h5>
+                            <button class="btn btn-success" id="add-to-details-cart">Add to Details Cart</button>
+                        </div>
+                    </div>
+                    <hr>
+                    <h5>Details Cart</h5>
+                    <div id="details-cart" class="border p-2">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="index1.js"></script>
+</body>
+
+</html>
